@@ -1,0 +1,91 @@
+edusys:.
+|   app.py
+|   edusys_create.sql
+|   edusys_insert.sql
+|   requirements.txt
+|   tree.txt
+|
++---src
+|   |   admin.py
+|   |   config.py
+|   |   data_get.py
+|   |   edit.py
+|   |   login_logout.py
+|   |   student.py
+|   |   teacher.py
+|   \---utils.py
+|
++---static
+|   +---assets
+|   |   +---css
+|   |   |       admin.css
+|   |   |       amazeui.min.css
+|   |   |       app.css
+|   |   |       bootstrap-select.css
+|   |   |       bootstrap-table.min.css
+|   |   |       bootstrap.min.css
+|   |   |       bootstrap3.min.css
+|   |   |       font-awesome.min.css
+|   |   |       
+|   |   \---js
+|   |       |   admin.js
+|   |       |   amazeui.min.js
+|   |       |   app.js
+|   |       |   bootstrap-select.js
+|   |       |   bootstrap-table-export.js
+|   |       |   bootstrap-table.js
+|   |       |   bootstrap.min.js
+|   |       |   bootstrap3.min.js
+|   |       |   echarts.min.js
+|   |       |   iscroll.js
+|   |       |   jquery.min.js
+|   |       |   jquery2.min.js
+|   |       |   layDate-v5.0.9.zip
+|   |       |   popper.min.js
+|   |       |   student.js
+|   |       |   tableExport.js
+|   |       \---teacher.js
+|   |                           
+|   \---pic
+|           仰望星空.jpg
+|           北楼国立柱.jpg
+|           北楼夜景.jpg
+|           嘉园秋色.jpg
+|           嘉园秋色2.jpg
+|           图书馆全景图.jpg
+|           
++---templates
+|   |   login.html
+|   |   template.html
+|   |   
+|   +---admin
+|   |       admin_course_startApplication.html
+|   |       admin_course_teachApplication.html
+|   |       admin_course_viewCourse.html
+|   |       admin_course_viewSpecialityCurriculum.html
+|   |       admin_exam_editExam.html
+|   |       admin_header.html
+|   |       admin_index.html
+|   |       admin_stuff_addAdmin.html
+|   |       admin_stuff_addStudent.html
+|   |       admin_stuff_addTeacher.html
+|   |       
+|   +---student
+|   |       student_course_selectCourse.html
+|   |       student_course_specialityCurriculum.html
+|   |       student_course_studentCurriculum.html
+|   |       student_evaluate_addEvaluation.html
+|   |       student_exam_viewExam.html
+|   |       student_index.html
+|   |       student_score_viewScore.html
+|   |       
+|   \---teacher
+|           teacher_course_classStudent.html
+|           teacher_course_startApplication.html
+|           teacher_course_teachApplication.html
+|           teacher_course_teacherCurriculum.html
+|           teacher_evaluate_addEvaluation.html
+|           teacher_exam_classExam.html
+|           teacher_exam_monitorInfo.html
+|           teacher_index.html
+|           teacher_score_addScore.html
