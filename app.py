@@ -1,20 +1,16 @@
 # -*- coding: utf-8 -*-
 
-# --------------------------------------------------------------
-#    Description：
-#
-#
-# --------------------------------------------------------------
-from login_logout import log_bp
-from data_get import data_bp
-from edit import edit_bp
-from teacher import teacher_bp
-from student import student_bp
-from admin import admin_bp
-from gevent import pywsgi
-from flask import Flask, redirect, url_for
 import sys
 sys.path.append('./src')
+
+from flask import Flask, redirect, url_for
+from gevent import pywsgi
+from admin import admin_bp
+from student import student_bp
+from teacher import teacher_bp
+from edit import edit_bp
+from data_get import data_bp
+from login_logout import log_bp
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'xgmdRrFe.323'
