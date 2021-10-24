@@ -556,7 +556,7 @@ def getData_ScoreInfo():
             flash(traceback.print_exc())
             return None
 
-#获取教学评价信息
+#获取Evaluations信息
 @data_bp.route('/EvaluationInfo',methods=['GET','POST'])
 def getData_EvaluationInfo():
     mydb = mysql.connector.connect(host=mysql_host, user=mysql_user, passwd=mysql_passwd, db=mysql_db)

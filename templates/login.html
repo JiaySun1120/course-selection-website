@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Login</title>
+    <title>Tongji AAMS - Login</title>
     <meta name="description" content="这是一个 login 页面" />
     <meta name="keywords" content="index" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,10 +23,18 @@
     <script src="/static/assets/js/jquery2.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="/static/assets/js/bootstrap3.min.js"></script>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato" />
+    <style>
+      body {
+        font-family: "Lato", serif;
+        font-size: 48px;
+      }
+    </style>
   </head>
 
   <body>
-    <div class="bg-primary myapp-login-background">
+    <div class="bg-info myapp-login-background">
       {% with messages = get_flashed_messages() %} {% if messages %} {% for
       message in get_flashed_messages(with_categories=True) %} {% if
       message[1]!="None" %}
@@ -41,17 +49,22 @@
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
             <form class="form-horizontal" action="/login" method="post">
-              <span class="heading" style="padding: 15px 0px"
-                ><font size="60px" color="#4b0082">Academic Affairs Management System</font></span
+              <span class="heading" style="padding: 10px 0px"
+                ><h1 style="color: #4b0082">
+                  Academic Affairs Management System
+                </h1></span
               >
               <div class="form-group">
-                <label for="role" style="color: black; font-size: x-large">
-                  请选择登录角色
+                <label
+                  for="role"
+                  style="color: black; font-size: large; font-style: italic"
+                >
+                  Please select the login role:
                 </label>
                 <select class="form-control" name="role" id="InputRole">
-                  <option>管理员</option>
-                  <option>教师</option>
-                  <option>学生</option>
+                  <option>Admin</option>
+                  <option>Teacher</option>
+                  <option>Student</option>
                 </select>
                 <i class="fa fa-user"></i>
               </div>
@@ -61,7 +74,7 @@
                   class="form-control"
                   name="username"
                   id="InputUsername"
-                  placeholder="请输入用户名"
+                  placeholder="Username"
                 />
                 <i class="fa fa-user"></i>
               </div>
@@ -71,20 +84,20 @@
                   class="form-control"
                   name="password"
                   id="InputPassword"
-                  placeholder="请输入密码"
+                  placeholder="Password"
                 />
                 <i class="fa fa-lock"></i>
                 <a href="#" class="fa fa-question-circle"></a>
               </div>
               <div class="form-group">
-                <button type="submit" class="btn btn-default">登录</button>
+                <button type="submit" class="btn btn-default">Login</button>
               </div>
             </form>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
-            <h1>All Rights Reserved 2021</h1>
+            <h3 style="text-align: center">All Rights Reserved © 2021</h3>
           </div>
         </div>
       </div>

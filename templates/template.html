@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+<nav class="navbar navbar-expand-md navbar-dark bg-info">
   <div class="container">
-    <a href="#" class="navbar-brand">Academic Affairs Management System</a>
+    <a href="#" class="navbar-brand">Tongji AAMS</a>
 
     <button
       type="button"
@@ -14,7 +14,7 @@
     </button>
     <div class="dropdown nav-person">
       <a href="#" class="nav-item nav-link" data-toggle="dropdown"
-        >Hello, {{posts.AdminName}}（{{posts.AdminNo}}）</a
+        >Hello, {{posts.AdminName}} ({{posts.AdminNo}})</a
       >
       <div class="dropdown-menu">
         <a href="{{ url_for('logout')}}" class="dropdown-item">登出</a>
@@ -32,7 +32,7 @@
       <ul class="navbar-nav ml-auto">
         <li>
           <a href="{{ url_for('admin_index')}}" class="nav-item nav-link"
-            >首页</a
+            >Homepage</a
           >
         </li>
         <li class="dropdown">
@@ -57,7 +57,7 @@
         </li>
         <li class="dropdown">
           <a href="#" class="nav-item nav-link" data-toggle="dropdown"
-            >课程管理</a
+            >Courses</a
           >
           <div class="dropdown-menu">
             <!--'admin_course_teachApplication'-->
@@ -70,19 +70,19 @@
             <a href="#" class="dropdown-item">处理开课申请</a>
             <a href="#" class="dropdown-item">查看全校课程</a>
             <a href="#" class="dropdown-item">修改课程信息</a>
-            <a href="#" class="dropdown-item">查看专业课表</a>
+            <a href="#" class="dropdown-item">Class Schedule</a>
             <a href="#" class="dropdown-item">修改专业课表</a>
           </div>
         </li>
         <li class="dropdown">
           <a href="#" class="nav-item nav-link" data-toggle="dropdown"
-            >考试管理</a
+            >Examinations</a
           >
           <div class="dropdown-menu">
             <!--'admin_course_editExam'-->
             <!--'admin_course_viewExam'-->
             <a href="#" class="dropdown-item">设置考试安排</a>
-            <a href="#" class="dropdown-item">查看考试安排</a>
+            <a href="#" class="dropdown-item">Exam Schedule</a>
           </div>
         </li>
       </ul>

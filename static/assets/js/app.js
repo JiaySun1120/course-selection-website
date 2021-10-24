@@ -54,7 +54,7 @@ $(".tpl-header-nav-hover-ico").on("click", function () {
 // 页面数据
 var pageData = {
   // ===============================================
-  // 首页
+  // Homepage
   // ===============================================
   index: function indexData() {
     var myScroll = new IScroll("#wrapper", {

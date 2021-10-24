@@ -34,7 +34,7 @@ def login():
         # print(request.form['role'])
 
     # 管理员登录
-        if request.form['role'] == '管理员':
+        if request.form['role'] == 'Admin':
             sql = "select AdminPassword,AdminName from AdminInfo where AdminNo=%s" % (
                 request.form['username'])
             try:
@@ -56,7 +56,7 @@ def login():
                 print(traceback.print_exc())
 
     # 教师登录
-        elif request.form['role'] == '教师':
+        elif request.form['role'] == 'Teacher':
             sql = "select TeacherPassword,TeacherName,TeaCollegeNo from TeacherInfo where TeacherNo=%s" % (
                 request.form['username'])
             try:
@@ -79,7 +79,7 @@ def login():
                 print(traceback.print_exc())
 
     # 学生登录
-        elif request.form['role'] == '学生':
+        elif request.form['role'] == 'Student':
             sql = "select StudentPassword,StudentName,CollegeNo,SpecialityNo from StudentInfo where StudentNo=%s" % (
                 request.form['username'])
             try:
@@ -102,5 +102,5 @@ def login():
             except Exception as e:
                 print(traceback.print_exc())
 
-        flash(u'选择登录角色是：{} ，请检查账号密码！'.format(request.form['role']), 'warning')
+        flash(u'You have chosen the role {}, please check your username and password!'.format(request.form['role']), 'warning')
     return render_template('login.html')

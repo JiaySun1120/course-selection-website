@@ -319,7 +319,7 @@ def edit_addStudentCurriculum():
     mydb.commit()
     return {'status': True}
 
-# 添加教学评价
+# 添加Evaluations
 
 
 @edit_bp.route('/addEvaluation', methods=['GET', 'POST'])

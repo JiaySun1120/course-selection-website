@@ -2,7 +2,7 @@
 <html lang="en">
   <head class="header-area overlay">
     <meta charset="utf-8" />
-    <title>student_index</title>
+    <title>Tongji AAMS - Student</title>
     <link rel="stylesheet" href="/static/assets/css/amazeui.min.css" />
     <link rel="stylesheet" href="/static/assets/css/admin.css" />
     <link rel="stylesheet" href="/static/assets/css/app.css" />
@@ -15,9 +15,11 @@
     <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
     <script src="/static/assets/js/bootstrap.min.js"></script>
     <script src="/static/assets/js/student.js"></script>
-    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-md navbar-dark bg-info">
       <div class="container">
-        <a href="#" class="navbar-brand">Academic Affairs Management System</a>
+        <a href="#" class="navbar-brand" style="font-family: Lato, sans-serif"
+          >Tongji AAMS</a
+        >
 
         <button
           type="button"
@@ -31,16 +33,16 @@
         </button>
         <div class="dropdown nav-person">
           <a href="#" class="nav-item nav-link" data-toggle="dropdown"
-            >Hello, {{posts.StudentName}}（{{posts.StudentNo}}）</a
+            >Hello, {{posts.StudentName}} ({{posts.StudentNo}})!</a
           >
           <div class="dropdown-menu">
-            <a href="{{ url_for('log.logout')}}" class="dropdown-item">登出</a>
+            <a href="{{ url_for('log.logout')}}" class="dropdown-item">Logout</a>
             <a
               href="{{ url_for('log.logout')}}"
               class="dropdown-item"
               data-toggle="modal"
               data-target="#Modal_editPassword"
-              >修改密码</a
+              >Change Password</a
             >
           </div>
         </div>
@@ -51,64 +53,64 @@
               <a
                 href="{{ url_for('student.student_index')}}"
                 class="nav-item nav-link active"
-                >首页</a
+                >Homepage</a
               >
             </li>
             <li class="dropdown">
               <a href="#" class="nav-item nav-link" data-toggle="dropdown"
-                >课程管理</a
+                >Courses</a
               >
               <div class="dropdown-menu">
                 <a
                   href="{{url_for('student.student_course_specialityCurriculum')}}"
                   class="dropdown-item"
-                  >查看专业课表</a
+                  >Class Schedule</a
                 >
                 <a
                   href="{{url_for('student.student_course_studentCurriculum')}}"
                   class="dropdown-item"
-                  >查看个人课表</a
+                  >Personal Schedule</a
                 >
                 <a
                   href="{{url_for('student.student_course_selectCourse')}}"
                   class="dropdown-item"
-                  >选课</a
+                  >Select Courses</a
                 >
               </div>
             </li>
             <li class="dropdown">
               <a href="#" class="nav-item nav-link" data-toggle="dropdown"
-                >考试管理</a
+                >Examinations</a
               >
               <div class="dropdown-menu">
                 <a
                   href="{{url_for('student.student_exam_viewExam')}}"
                   class="dropdown-item"
-                  >查看考试安排</a
+                  >Exam Schedule</a
                 >
               </div>
             </li>
             <li class="dropdown">
               <a href="#" class="nav-item nav-link" data-toggle="dropdown"
-                >成绩管理</a
+                >Grades</a
               >
               <div class="dropdown-menu">
                 <a
                   href="{{url_for('student.student_score_viewScore')}}"
                   class="dropdown-item"
-                  >查看我的成绩</a
+                  >My Grades</a
                 >
               </div>
             </li>
             <li class="dropdown">
               <a href="#" class="nav-item nav-link" data-toggle="dropdown"
-                >教学评价</a
+                >Evaluations</a
               >
               <div class="dropdown-menu">
                 <a
                   href="{{url_for('student.student_evaluate_addEvaluation')}}"
                   class="dropdown-item"
-                  >教学评价</a
+                  >Evaluations</a
                 >
               </div>
             </li>
