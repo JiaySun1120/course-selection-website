@@ -43,13 +43,13 @@
             >Hello, {{posts.TeacherName}} ({{posts.TeacherNo}})</a
           >
           <div class="dropdown-menu">
-            <a href="{{ url_for('log.logout')}}" class="dropdown-item">登出</a>
+            <a href="{{ url_for('log.logout')}}" class="dropdown-item">Log Out</a>
             <a
               href="{{ url_for('log.logout')}}"
               class="dropdown-item"
               data-toggle="modal"
               data-target="#Modal_editPassword"
-              >修改密码</a
+              >Change Password</a
             >
           </div>
         </div>
@@ -74,22 +74,22 @@
                 <a
                   href="{{url_for('teacher.teacher_course_teachApplication')}}"
                   class="dropdown-item"
-                  >任课申请</a
+                  >Application for Teaching</a
                 >
                 <a
                   href="{{url_for('teacher.teacher_course_startApplication')}}"
                   class="dropdown-item"
-                  >开课申请</a
+                  >Application for Class Start</a
                 >
                 <a
                   href="{{url_for('teacher.teacher_course_teacherCurriculum')}}"
                   class="dropdown-item"
-                  >查看任课课表</a
+                  >View Personal Schedule</a
                 >
                 <a
                   href="{{url_for('teacher.teacher_course_classStudent')}}"
                   class="dropdown-item"
-                  >查看学生名单</a
+                  >View Student List</a
                 >
               </div>
             </li>
@@ -101,12 +101,12 @@
                 <a
                   href="{{url_for('teacher.teacher_exam_monitorInfo')}}"
                   class="dropdown-item"
-                  >查看监考安排</a
+                  >View Invigilation Schedule</a
                 >
                 <a
                   href="{{url_for('teacher.teacher_exam_classExam')}}"
                   class="dropdown-item"
-                  >查看教学班考试安排</a
+                  >Check Exam Schedule for My Classes</a
                 >
               </div>
             </li>
@@ -118,7 +118,7 @@
                 <a
                   href="{{url_for('teacher.teacher_score_addScore')}}"
                   class="dropdown-item"
-                  >录入成绩</a
+                  >Record Grades</a
                 >
               </div>
             </li>
@@ -151,14 +151,14 @@
           >
             <thead>
               <tr>
-                <th data-field="ClassNo">节次</th>
-                <th data-field="Monday">周一</th>
-                <th data-field="Tuesday">周二</th>
-                <th data-field="Wednesday">周三</th>
-                <th data-field="Thursday">周四</th>
-                <th data-field="Friday">周五</th>
-                <th data-field="Saturday">周六</th>
-                <th data-field="Sunday">周七</th>
+                <th data-field="ClassNo">Section</th>
+                <th data-field="Monday">Monday</th>
+                <th data-field="Tuesday">Tuesday</th>
+                <th data-field="Wednesday">Wednesday</th>
+                <th data-field="Thursday">Thursday</th>
+                <th data-field="Friday">Friday</th>
+                <th data-field="Saturday">Saturday</th>
+                <th data-field="Sunday">Sunday</th>
               </tr>
             </thead>
           </table>
@@ -186,7 +186,7 @@
             </div>
             <div class="modal-body">
               <div class="form-group">
-                <label for="oldPassword">旧密码</label>
+                <label for="oldPassword">Original Password</label>
                 <input
                   type="password"
                   name="oldPassword"
@@ -197,14 +197,14 @@
                 />
               </div>
               <div class="form-group">
-                <label for="newPassword">新密码</label>
+                <label for="newPassword">New Password</label>
                 <input
                   type="password"
                   name="newPassword"
                   id="newPassword"
                   class="form-control"
                   required="required"
-                  placeholder="至少6位"
+                  placeholder="At Least 6 Characters"
                 />
               </div>
             </div>

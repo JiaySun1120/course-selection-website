@@ -74,13 +74,18 @@ def login():
                         session['identity'] = 'teacher'
                         session['password'] = request.form['password']
                         session['college'] = cur_res[0][2]
+                        
+                        cur.execute("select CollegeName from CollegeInfo where CollegeNo=%s" % (
+                            session['college']))
+                        session['collegeName'] = cur.fetchall()[0][0]
+                        print(session)
                         return redirect(url_for('teacher.teacher_index'))
             except Exception as e:
                 print(traceback.print_exc())
 
     # 学生登录
         elif request.form['role'] == 'Student':
-            sql = "select StudentPassword,StudentName,CollegeNo,SpecialityNo from StudentInfo where StudentNo=%s" % (
+            sql = "select StudentPassword,StudentName,CollegeNo,SpecialityNo,StudentGender,StudentBirthday from StudentInfo where StudentNo=%s" % (
                 request.form['username'])
             try:
                 cur.execute(sql)
@@ -98,9 +103,21 @@ def login():
                         session['password'] = request.form['password']
                         session['college'] = cur_res[0][2]
                         session['speciality'] = cur_res[0][3]
+                        session['gender'] = cur_res[0][4]
+                        session['birthday'] = cur_res[0][5]
+
+                        cur.execute("select SpecialityName from SpecialityInfo where SpecialityNo=%s" % (
+                            session['speciality']))
+                        session['specialityName'] = cur.fetchall()[0][0]
+
+                        cur.execute("select CollegeName from CollegeInfo where CollegeNo=%s" % (
+                            session['college']))
+                        session['collegeName'] = cur.fetchall()[0][0]
+                        print(session)
                         return redirect(url_for('student.student_index'))
             except Exception as e:
                 print(traceback.print_exc())
 
-        flash(u'You have chosen the role {}, please check your username and password!'.format(request.form['role']), 'warning')
+        flash(u'You have chosen the role {}, please check your username and password!'.format(
+            request.form['role']), 'warning')
     return render_template('login.html')

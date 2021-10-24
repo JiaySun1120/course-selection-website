@@ -433,7 +433,7 @@ q .banner h1 {
   position: relative;
   padding: 10px 20px;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, .1);
   transition: color 0.2s ease-in;
 }
@@ -629,4 +629,17 @@ q .banner h1 {
 
 .table-fix {
   table-layout: fixed !important;
+}
+
+.table>tbody>tr>td {
+  border-top: 1px solid transparent !important;
+  border-right: 1px solid transparent !important;
+  border-left: 1px solid transparent !important;
+  text-align: center;
+}
+
+.table>thead>tr>th {
+  border-right: 1px solid transparent !important;
+  border-left: 1px solid transparent !important;
+  text-align: center;
 }

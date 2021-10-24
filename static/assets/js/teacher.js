@@ -123,7 +123,7 @@ var addTeachApplication_submit = function () {
     success: function (res) {
       if (res["status"] == false) {
         if (res["reason"] == "wrong oldPassword") {
-          alert("旧密码错误");
+          alert("Original Password错误");
         } else {
           alert("数据库错误，稍后重试");
         }
@@ -146,7 +146,7 @@ var addStartApplication_submit = function () {
     success: function (res) {
       if (res["status"] == false) {
         if (res["reason"] == "wrong oldPassword") {
-          alert("旧密码错误");
+          alert("Original Password错误");
         } else {
           alert("数据库错误，稍后重试");
         }
@@ -168,9 +168,9 @@ var editPassword_submit = function () {
     success: function (res) {
       if (res["status"] == false) {
         if (res["reason"] == "wrong oldPassword") {
-          alert("旧密码错误");
+          alert("Original Password错误");
         } else if (res["reason"] == "short newPassword") {
-          alert("新密码至少6位");
+          alert("New PasswordAt Least 6 Characters");
         } else {
           alert("数据库错误，稍后重试");
         }

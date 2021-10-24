@@ -26,7 +26,7 @@ def edit_addStudent():
     CollegeNo = 0
     data = json.loads(request.get_data(as_text=True))
 
-    # 先查找学院号
+    # 先查找College号
     sql = "select CollegeNo from SpecialityInfo where SpecialityNo='%s'" % (
         data["addSpeciality"])
     try:
@@ -65,7 +65,7 @@ def edit_addTeacher():
     CollegeNo = 0
     data = json.loads(request.get_data(as_text=True))
 
-    # 先查找学院号
+    # 先查找College号
     sql = "select CollegeNo from CollegeInfo where CollegeName='%s'" % (
         data["addCollege"])
     try:
@@ -155,7 +155,7 @@ def edit_editPassword():
         print(traceback.print_exc())
         return {'status': False, 'reason': 'mysql wrong'}
 
-# 处理任课申请
+# Process Applications for Teaching
 
 
 @edit_bp.route('/HandleTeachApplication', methods=['GET', 'POST'])
@@ -198,7 +198,7 @@ def edit_HandleTeachApplication():
     else:
         return {'status': False}
 
-# 处理开课申请
+# Process Applications for Class Start
 
 
 @edit_bp.route('/HandleStartApplication', methods=['GET', 'POST'])
@@ -283,7 +283,7 @@ def edit_delStudentCurriculum():
     mydb.commit()
     return {'status': True}
 
-# 添加个人课程表项
+# Add个人课程表项
 
 
 @edit_bp.route('/addStudentCurriculum', methods=['GET', 'POST'])
@@ -319,7 +319,7 @@ def edit_addStudentCurriculum():
     mydb.commit()
     return {'status': True}
 
-# 添加Evaluations
+# AddEvaluations
 
 
 @edit_bp.route('/addEvaluation', methods=['GET', 'POST'])
@@ -344,7 +344,7 @@ def edit_addEvaluation():
 
     return {'status': False}
 
-# 添加成绩
+# AddGrade
 
 
 @edit_bp.route('/addScore', methods=['GET', 'POST'])

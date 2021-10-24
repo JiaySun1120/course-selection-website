@@ -18,7 +18,8 @@ def student_index():
 
 @student_bp.route('/student_course_specialityCurriculum', methods=['GET', 'POST'])
 def student_course_specialityCurriculum():
-    posts = {"StudentNo": session['No'], "StudentName": session['name']}
+    posts = {"StudentNo": session['No'], "StudentName": session['name'],
+             "specialityName": session['specialityName'], "collegeName": session['collegeName'], }
     return render_template('/student/student_course_specialityCurriculum.html', posts=posts)
 
 

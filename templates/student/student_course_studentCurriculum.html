@@ -1,7 +1,7 @@
 <html lang="en">
   <head class="header-area overlay">
     <meta charset="utf-8" />
-    <title>student_course_studentCurriculum</title>
+    <title>Tongji AAMS - {{posts.StudentName}} (Student)</title>
     <link rel="stylesheet" href="/static/assets/css/amazeui.min.css" />
     <link rel="stylesheet" href="/static/assets/css/admin.css" />
     <link rel="stylesheet" href="/static/assets/css/app.css" />
@@ -43,13 +43,13 @@
             >Hello, {{posts.StudentName}} ({{posts.StudentNo}})</a
           >
           <div class="dropdown-menu">
-            <a href="{{ url_for('log.logout')}}" class="dropdown-item">登出</a>
+            <a href="{{ url_for('log.logout')}}" class="dropdown-item">Log Out</a>
             <a
               href="{{ url_for('log.logout')}}"
               class="dropdown-item"
               data-toggle="modal"
               data-target="#Modal_editPassword"
-              >修改密码</a
+              >Change Password</a
             >
           </div>
         </div>
@@ -136,7 +136,7 @@
         margin-top: 1em;
       "
     >
-      Your personal schedule is shown below.
+      {{posts.StudentName}}, your personal schedule is shown below.
     </div>
     <div class="container">
       <div class="row justify-content-center">
@@ -151,14 +151,14 @@
           >
             <thead>
               <tr>
-                <th data-field="ClassNo">节次</th>
-                <th data-field="Monday">周一</th>
-                <th data-field="Tuesday">周二</th>
-                <th data-field="Wednesday">周三</th>
-                <th data-field="Thursday">周四</th>
-                <th data-field="Friday">周五</th>
-                <th data-field="Saturday">周六</th>
-                <th data-field="Sunday">周七</th>
+                <th data-field="ClassNo"></th>
+                <th data-field="Monday">Monday</th>
+                <th data-field="Tuesday">Tuesday</th>
+                <th data-field="Wednesday">Wednesday</th>
+                <th data-field="Thursday">Thursday</th>
+                <th data-field="Friday">Friday</th>
+                <th data-field="Saturday">Saturday</th>
+                <th data-field="Sunday">Sunday</th>
               </tr>
             </thead>
           </table>
@@ -186,7 +186,7 @@
             </div>
             <div class="modal-body">
               <div class="form-group">
-                <label for="oldPassword">旧密码</label>
+                <label for="oldPassword">Original Password</label>
                 <input
                   type="password"
                   name="oldPassword"
@@ -197,14 +197,14 @@
                 />
               </div>
               <div class="form-group">
-                <label for="newPassword">新密码</label>
+                <label for="newPassword">New Password</label>
                 <input
                   type="password"
                   name="newPassword"
                   id="newPassword"
                   class="form-control"
                   required="required"
-                  placeholder="至少6位"
+                  placeholder="At Least 6 Characters"
                 />
               </div>
             </div>

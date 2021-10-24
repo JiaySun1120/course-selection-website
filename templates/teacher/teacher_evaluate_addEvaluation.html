@@ -44,13 +44,13 @@
             >Hello, {{posts.TeacherName}} ({{posts.TeacherNo}})</a
           >
           <div class="dropdown-menu">
-            <a href="{{ url_for('log.logout')}}" class="dropdown-item">登出</a>
+            <a href="{{ url_for('log.logout')}}" class="dropdown-item">Log Out</a>
             <a
               href="{{ url_for('log.logout')}}"
               class="dropdown-item"
               data-toggle="modal"
               data-target="#Modal_editPassword"
-              >修改密码</a
+              >Change Password</a
             >
           </div>
         </div>
@@ -72,22 +72,22 @@
                 <a
                   href="{{url_for('teacher.teacher_course_teachApplication')}}"
                   class="dropdown-item"
-                  >任课申请</a
+                  >Application for Teaching</a
                 >
                 <a
                   href="{{url_for('teacher.teacher_course_startApplication')}}"
                   class="dropdown-item"
-                  >开课申请</a
+                  >Application for Class Start</a
                 >
                 <a
                   href="{{url_for('teacher.teacher_course_teacherCurriculum')}}"
                   class="dropdown-item"
-                  >查看任课课表</a
+                  >View Personal Schedule</a
                 >
                 <a
                   href="{{url_for('teacher.teacher_course_classStudent')}}"
                   class="dropdown-item"
-                  >查看学生名单</a
+                  >View Student List</a
                 >
               </div>
             </li>
@@ -99,12 +99,12 @@
                 <a
                   href="{{url_for('teacher.teacher_exam_monitorInfo')}}"
                   class="dropdown-item"
-                  >查看监考安排</a
+                  >View Invigilation Schedule</a
                 >
                 <a
                   href="{{url_for('teacher.teacher_exam_classExam')}}"
                   class="dropdown-item"
-                  >查看教学班考试安排</a
+                  >Check Exam Schedule for My Classes</a
                 >
               </div>
             </li>
@@ -116,7 +116,7 @@
                 <a
                   href="{{url_for('teacher.teacher_score_addScore')}}"
                   class="dropdown-item"
-                  >录入成绩</a
+                  >Record Grades</a
                 >
               </div>
             </li>
@@ -151,7 +151,7 @@
             >
               <i class="fa fa-plus"></i> 自评
             </button>
-            <label for="addCourseNo">选择课程</label>
+            <label for="addCourseNo">Select Course</label>
             <select
               class="form-control"
               data-live-search="true"
@@ -164,9 +164,9 @@
           <table id="table" class="table-fix">
             <thead>
               <tr>
-                <th data-field="courseID" data-sortable="true">课号</th>
-                <th data-field="courseName">课程名</th>
-                <th data-field="content">学生评价内容</th>
+                <th data-field="courseID" data-sortable="true">Course No.</th>
+                <th data-field="courseName">Course Name</th>
+                <th data-field="content">Content of Evaluation</th>
               </tr>
             </thead>
           </table>
@@ -194,7 +194,7 @@
             </div>
             <div class="modal-body">
               <div class="form-group">
-                <label for="addCourseNo2">选择课程</label>
+                <label for="addCourseNo2">Select Course</label>
                 <select
                   class="form-control selectpicker"
                   data-live-search="true"
@@ -204,7 +204,7 @@
                 ></select>
               </div>
               <div class="form-group">
-                <label for="addEva">填写评价</label>
+                <label for="addEva">Fill out the evaluation</label>
                 <input id="addEva" />
               </div>
               <style onload="getTeachCourses2()"></style>
@@ -254,7 +254,7 @@
             </div>
             <div class="modal-body">
               <div class="form-group">
-                <label for="oldPassword">旧密码</label>
+                <label for="oldPassword">Original Password</label>
                 <input
                   type="password"
                   name="oldPassword"
@@ -265,14 +265,14 @@
                 />
               </div>
               <div class="form-group">
-                <label for="newPassword">新密码</label>
+                <label for="newPassword">New Password</label>
                 <input
                   type="password"
                   name="newPassword"
                   id="newPassword"
                   class="form-control"
                   required="required"
-                  placeholder="至少6位"
+                  placeholder="At Least 6 Characters"
                 />
               </div>
             </div>

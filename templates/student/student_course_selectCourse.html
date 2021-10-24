@@ -1,7 +1,7 @@
 <html lang="en">
 <head class="header-area overlay">
     <meta charset="utf-8">
-    <title>student_course_studentCurriculum</title>
+    <title>Tongji AAMS -  {{posts.StudentName}} (Student)</title>
     <link rel="stylesheet" href="/static/assets/css/amazeui.min.css" />
     <link rel="stylesheet" href="/static/assets/css/admin.css">
     <link rel="stylesheet" href="/static/assets/css/app.css">
@@ -36,8 +36,8 @@
 			<div class="dropdown nav-person">
 				<a href="#" class="nav-item nav-link" data-toggle="dropdown">Hello, {{posts.StudentName}} ({{posts.StudentNo}})</a>
 				<div class="dropdown-menu">
-					<a href="{{ url_for('log.logout')}}" class="dropdown-item">登出</a>
-					<a href="{{ url_for('log.logout')}}" class="dropdown-item" data-toggle = "modal" data-target="#Modal_editPassword">修改密码</a>
+					<a href="{{ url_for('log.logout')}}" class="dropdown-item">Log Out</a>
+					<a href="{{ url_for('log.logout')}}" class="dropdown-item" data-toggle = "modal" data-target="#Modal_editPassword">Change Password</a>
 				</div>
 			</div>
 
@@ -79,7 +79,7 @@
 		<div class="col-12">
 			<div id="toolbar">
 			  <button id="add" class="btn btn-primary" data-toggle = "modal" data-target="#Modal_addStudentCurriculum">
-				<i class="fa fa-plus"></i> 添加
+				<i class="fa fa-plus"></i> Add
 			  </button>
 			</div>
 			</div>
@@ -91,12 +91,12 @@
 				class="table-fix">
 		  <thead>
 			<tr>
-			  <th data-field="courseID" data-sortable="true">课号</th>
-			  <th data-field="courseName" data-sortable="true">课程名</th>
-			  <th data-field="teacherName" data-sortable="true">教师名</th>
-			  <th data-field="time">课程时间</th>
-			  <th data-field="classroom">教室</th>
-              <th data-field="operate" data-formatter="operateFormatter" data-events="window.operateEvents">操作</th>
+			  <th data-field="courseID" data-sortable="true">Course No.</th>
+			  <th data-field="courseName" data-sortable="true">Course Name</th>
+			  <th data-field="teacherName" data-sortable="true">Teacher Name</th>
+			  <th data-field="time">Course Hours</th>
+			  <th data-field="classroom">Classroom</th>
+              <th data-field="operate" data-formatter="operateFormatter" data-events="window.operateEvents">Operation</th>
 			</tr>
 		  </thead>
 		</table>
@@ -133,12 +133,12 @@
 			   </div>
 			   <div class="modal-body">
 					 <div class="form-group">
-					   <label for="oldPassword">旧密码</label>
+					   <label for="oldPassword">Original Password</label>
 					   <input type="password" name="oldPassword" id="oldPassword" class="form-control" required="required" autocomplete="new-password">
 					 </div>
 					 <div class="form-group">
-					   <label for="newPassword">新密码</label>
-					   <input type="password" name="newPassword" id="newPassword" class="form-control" required="required" placeholder="至少6位">
+					   <label for="newPassword">New Password</label>
+					   <input type="password" name="newPassword" id="newPassword" class="form-control" required="required" placeholder="At Least 6 Characters">
 					 </div>
 			   </div>
 			   <div class="modal-footer">
@@ -167,7 +167,7 @@
 	  '</button>'
     ].join('')
   }
-/* 这个地方实际上是准备添加功能的
+/* 这个地方实际上是准备Add功能的
   window.operateEvents = {
     'click #remove': function(e,value,row,index){
         $.ajax({

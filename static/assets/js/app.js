@@ -108,7 +108,7 @@ var pageData = {
         {
           type: "category",
           boundaryGap: true,
-          data: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+          data: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         },
       ],
 
@@ -287,7 +287,7 @@ var pageData = {
               max: 100,
             },
             {
-              text: "内容",
+              text: "Content",
               max: 100,
             },
             {
@@ -425,7 +425,7 @@ var pageData = {
         {
           type: "category",
           boundaryGap: true,
-          data: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+          data: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         },
       ],
 

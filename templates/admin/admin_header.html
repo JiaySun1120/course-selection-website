@@ -17,13 +17,13 @@
         >Hello, {{posts.AdminName}} ({{posts.AdminNo}})</a
       >
       <div class="dropdown-menu">
-        <a href="{{ url_for('log.logout')}}" class="dropdown-item">登出</a>
+        <a href="{{ url_for('log.logout')}}" class="dropdown-item">Log Out</a>
         <a
           href="{{ url_for('log.logout')}}"
           class="dropdown-item"
           data-toggle="modal"
           data-target="#Modal_editPassword"
-          >修改密码</a
+          >Change Password</a
         >
       </div>
     </div>
@@ -39,23 +39,23 @@
         </li>
         <li class="dropdown">
           <a href="#" class="nav-item nav-link" data-toggle="dropdown"
-            >人员管理</a
+            >Personnel</a
           >
           <div class="dropdown-menu">
             <a
               href="{{url_for('admin.admin_stuff_addStudent')}}"
               class="dropdown-item"
-              >录入学生</a
+              >Record Students</a
             >
             <a
               href="{{url_for('admin.admin_stuff_addTeacher')}}"
               class="dropdown-item"
-              >录入教师</a
+              >Record Teachers</a
             >
             <a
               href="{{url_for('admin.admin_stuff_addAdmin')}}"
               class="dropdown-item"
-              >录入管理员</a
+              >Record Admins</a
             >
           </div>
         </li>
@@ -67,17 +67,17 @@
             <a
               href="{{url_for('admin.admin_course_teachApplication')}}"
               class="dropdown-item"
-              >处理任课申请</a
+              >Process Applications for Teaching</a
             >
             <a
               href="{{url_for('admin.admin_course_startApplication')}}"
               class="dropdown-item"
-              >处理开课申请</a
+              >Process Applications for Class Start</a
             >
             <a
               href="{{url_for('admin.admin_course_viewCourse')}}"
               class="dropdown-item"
-              >查看全校课程</a
+              >View Full School Curriculum</a
             >
             <a
               href="{{url_for('admin.admin_course_viewSpecialityCurriculum')}}"
@@ -94,7 +94,7 @@
             <a
               href="{{url_for('admin.admin_exam_editExam')}}"
               class="dropdown-item"
-              >设置考试安排</a
+              >Set Exam Schedules</a
             >
           </div>
         </li>

@@ -6,18 +6,19 @@
 #
 # --------------------------------------------------------------
 
-# 计算课程时间
+# 计算Course Hours
 def cur_courseTime(data):
     res = ""
-    day = ["", "周一", "周二", "周三", "周四", "周五", "周六", "周七"]
+    day = ["", "Monday", "Tuesday", "Wednesday",
+           "Thursday", "Friday", "Saturday", "Sunday"]
     beginNo = data[1]
     endNo = data[1]+data[2]-1
-    res = day[int(data[0])]+"第"+str(beginNo)+"-"+str(endNo)+"节课"
+    res = "Sections "+str(beginNo)+" to "+str(endNo)+", "+day[int(data[0])]
     return res
 
-# 计算考试时间
+# 计算Exam Time
 
 
 def cur_examTime(data):
-    res = data[0].isoformat()+"：\n"+str(data[1])+"-"+str(data[2])
+    res = data[0].isoformat()+"<br />"+str(data[1])+" - "+str(data[2])
     return res

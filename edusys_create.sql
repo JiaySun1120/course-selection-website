@@ -1,11 +1,11 @@
-drop database edusys;
+-- drop database edusys;
 create database edusys;
 use edusys;
 show databases;
 CREATE TABLE IF NOT EXISTS `AdminInfo` (
     `AdminNo` int(7) NOT NULL AUTO_INCREMENT,
     `AdminName` varchar(20) CHARACTER SET utf8mb4 NOT NULL,
-    `AdminGender` enum('女', '男') CHARACTER SET utf8mb4 NOT NULL,
+    `AdminGender` enum('Female', 'Male') CHARACTER SET utf8mb4 NOT NULL,
     `AdminBirthday` date NOT NULL,
     `AdminPassword` varchar(32) CHARACTER SET utf8mb4 NOT NULL DEFAULT '' COMMENT 'encrypted by base32',
     PRIMARY KEY (`AdminNo`),
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `SpecialityInfo` (
 CREATE TABLE IF NOT EXISTS `StudentInfo` (
     `StudentNo` int(7) NOT NULL AUTO_INCREMENT,
     `StudentName` varchar(20) CHARACTER SET utf8mb4 NOT NULL,
-    `StudentGender` enum('男', '女') CHARACTER SET utf8mb4 NOT NULL,
+    `StudentGender` enum('Male', 'Female') CHARACTER SET utf8mb4 NOT NULL,
     `StudentBirthday` date NOT NULL,
     `CollegeNo` int(3) NOT NULL,
     `SpecialityNo` int(5) NOT NULL,
@@ -40,8 +40,8 @@ CREATE TABLE IF NOT EXISTS `StudentInfo` (
 ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4;
 CREATE TABLE IF NOT EXISTS `TeacherInfo` (
     `TeacherNo` int(7) NOT NULL AUTO_INCREMENT,
-    `TeacherName` varchar(20) NOT NULL,
-    `TeacherGender` enum('男', '女') CHARACTER SET utf8mb4 NOT NULL,
+    `TeacherName` varchar(30) NOT NULL,
+    `TeacherGender` enum('Male', 'Female') CHARACTER SET utf8mb4 NOT NULL,
     `TeacherBirthday` date NOT NULL,
     `TeaCollegeNo` int(3) NOT NULL,
     `TeacherPassword` varchar(32) CHARACTER SET utf8mb4 NOT NULL DEFAULT '' COMMENT 'encrypted by base32',
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `ClassroomInfo` (
 ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4;
 CREATE TABLE IF NOT EXISTS `CourseInfo` (
     `CourseNo` int(9) NOT NULL AUTO_INCREMENT,
-    `CourseName` varchar(40) NOT NULL,
+    `CourseName` varchar(100) NOT NULL,
     `TeacherNo` int(7) NULL,
     `CourseDay` enum('1', '2', '3', '4', '5', '6', '7') NULL,
     `CourseBeginNo` int(2) NULL,

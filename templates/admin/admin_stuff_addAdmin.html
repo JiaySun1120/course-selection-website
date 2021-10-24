@@ -43,13 +43,13 @@
             >Hello, {{posts.AdminName}} ({{posts.AdminNo}})</a
           >
           <div class="dropdown-menu">
-            <a href="{{ url_for('log.logout')}}" class="dropdown-item">登出</a>
+            <a href="{{ url_for('log.logout')}}" class="dropdown-item">Log Out</a>
             <a
               href="{{ url_for('log.logout')}}"
               class="dropdown-item"
               data-toggle="modal"
               data-target="#Modal_editPassword"
-              >修改密码</a
+              >Change Password</a
             >
           </div>
         </div>
@@ -68,23 +68,23 @@
                 href="#"
                 class="nav-item nav-link active"
                 data-toggle="dropdown"
-                >人员管理</a
+                >Personnel</a
               >
               <div class="dropdown-menu">
                 <a
                   href="{{url_for('admin.admin_stuff_addStudent')}}"
                   class="dropdown-item"
-                  >录入学生</a
+                  >Record Students</a
                 >
                 <a
                   href="{{url_for('admin.admin_stuff_addTeacher')}}"
                   class="dropdown-item"
-                  >录入教师</a
+                  >Record Teachers</a
                 >
                 <a
                   href="{{url_for('admin.admin_stuff_addAdmin')}}"
                   class="dropdown-item"
-                  >录入管理员</a
+                  >Record Admins</a
                 >
               </div>
             </li>
@@ -102,17 +102,17 @@
                 <a
                   href="{{url_for('admin.admin_course_teachApplication')}}"
                   class="dropdown-item"
-                  >处理任课申请</a
+                  >Process Applications for Teaching</a
                 >
                 <a
                   href="{{url_for('admin.admin_course_startApplication')}}"
                   class="dropdown-item"
-                  >处理开课申请</a
+                  >Process Applications for Class Start</a
                 >
                 <a
                   href="{{url_for('admin.admin_course_viewCourse')}}"
                   class="dropdown-item"
-                  >查看全校课程</a
+                  >View Full School Curriculum</a
                 >
                 <a
                   href="{{url_for('admin.admin_course_viewSpecialityCurriculum')}}"
@@ -129,7 +129,7 @@
                 <a
                   href="{{url_for('admin.admin_exam_editExam')}}"
                   class="dropdown-item"
-                  >设置考试安排</a
+                  >Set Exam Schedules</a
                 >
               </div>
             </li>
@@ -147,7 +147,7 @@
               data-toggle="modal"
               data-target="#Modal"
             >
-              <i class="fa fa-plus"></i> 添加
+              <i class="fa fa-plus"></i> Add
             </button>
           </div>
           <table
@@ -164,16 +164,16 @@
           >
             <thead>
               <tr>
-                <th data-field="No" data-sortable="true">工号</th>
-                <th data-field="name" data-sortable="true">姓名</th>
-                <th data-field="gender" data-sortable="true">性别</th>
-                <th data-field="birthday" data-sortable="true">出生日期</th>
+                <th data-field="No" data-sortable="true">Work No.</th>
+                <th data-field="name" data-sortable="true">Name</th>
+                <th data-field="gender" data-sortable="true">Gender</th>
+                <th data-field="birthday" data-sortable="true">Date of Birth</th>
                 <th
                   data-field="operate"
                   data-formatter="operateFormatter"
                   data-events="window.operateEvents"
                 >
-                  操作
+                  Operation
                 </th>
               </tr>
             </thead>
@@ -202,7 +202,7 @@
             </div>
             <div class="modal-body">
               <div class="form-group">
-                <label for="addName">姓名</label>
+                <label for="addName">Name</label>
                 <input
                   type="text"
                   name="addName"
@@ -212,7 +212,7 @@
                 />
               </div>
               <div class="form-group">
-                <label for="addGender">性别</label>
+                <label for="addGender">Gender</label>
                 <select
                   class="form-control selectpicker"
                   data-live-search="true"
@@ -220,18 +220,18 @@
                   id="addGender"
                   required="required"
                 >
-                  <option>男</option>
-                  <option>女</option>
+                  <option>Male</option>
+                  <option>Female</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="addBirthday">出生日期</label>
+                <label for="addBirthday">Date of Birth</label>
                 <input
                   type="text"
                   class="input-group col-md-5"
                   name="addBirthday"
                   id="addBirthday"
-                  placeholder="请选择日期"
+                  placeholder="Please Select Date"
                   required="required"
                 />
               </div>
@@ -281,7 +281,7 @@
             </div>
             <div class="modal-body">
               <div class="form-group">
-                <label for="oldPassword">旧密码</label>
+                <label for="oldPassword">Original Password</label>
                 <input
                   type="password"
                   name="oldPassword"
@@ -292,14 +292,14 @@
                 />
               </div>
               <div class="form-group">
-                <label for="newPassword">新密码</label>
+                <label for="newPassword">New Password</label>
                 <input
                   type="password"
                   name="newPassword"
                   id="newPassword"
                   class="form-control"
                   required="required"
-                  placeholder="至少6位"
+                  placeholder="At Least 6 Characters"
                 />
               </div>
             </div>
