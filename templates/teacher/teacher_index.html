@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/static/assets/css/amazeui.min.css" />
     <link rel="stylesheet" href="/static/assets/css/admin.css" />
     <link rel="stylesheet" href="/static/assets/css/app.css" />
+    <link rel="stylesheet" href="/static/assets/css/main1.css" />
     <!-- 新 Bootstrap4 核心 CSS 文件 -->
     <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css" />
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
@@ -31,7 +32,7 @@
         </button>
         <div class="dropdown nav-person">
           <a href="#" class="nav-item nav-link" data-toggle="dropdown"
-            >Hello, {{posts.TeacherName}} ({{posts.TeacherNo}})</a
+            >Account</a
           >
           <div class="dropdown-menu">
             <a href="{{ url_for('log.logout')}}" class="dropdown-item">Log Out</a>
@@ -127,14 +128,23 @@
       </div>
     </nav>
   </head>
-  <body>
-    <div class="banner index-bg-teacher">
-      <div class="container">
-        <h1>您的身份是：<keypoint>教师</keypoint></h1>
-        <h1>欢迎使用教务管理网站</h1>
-        <h1>请在右上角选择功能</h1>
-      </div>
-    </div>
+  <body id="pagebody">
+    <!-- Home --> 
+			<article id="topp" class="wrapper style1">
+				<div class="kontainer">
+					<div class="roww">
+						<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="../static/assets/images/pic00.jpg" alt="" /></span>
+						</div>
+						<div class="col-8 col-7-large col-12-medium">
+							<header>
+								<h1>Hi! Prof.<strong> {{posts.TeacherName}} ({{posts.TeacherNo}})</strong>.</h1>
+							</header>
+							<p>Welcome to <strong>TONGJI AAMS</strong>, a complete course selection,teacher&student management site.</p>
+						</div>
+					</div>
+				</div>
+			</article>
     <div
       class="modal fade"
       id="Modal_editPassword"
