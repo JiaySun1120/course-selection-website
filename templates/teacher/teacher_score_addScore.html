@@ -1,7 +1,7 @@
 <html lang="en">
   <head class="header-area overlay">
     <meta charset="utf-8" />
-    <title>teacher_score_addScore</title>
+    <title>Tongji AAMS - {{posts.TeacherName}} (Teacher)</title>
     <link rel="stylesheet" href="/static/assets/css/amazeui.min.css" />
     <link rel="stylesheet" href="/static/assets/css/admin.css" />
     <link rel="stylesheet" href="/static/assets/css/app.css" />
@@ -44,7 +44,9 @@
             >Hello, {{posts.TeacherName}} ({{posts.TeacherNo}})</a
           >
           <div class="dropdown-menu">
-            <a href="{{ url_for('log.logout')}}" class="dropdown-item">Log Out</a>
+            <a href="{{ url_for('log.logout')}}" class="dropdown-item"
+              >Log Out</a
+            >
             <a
               href="{{ url_for('log.logout')}}"
               class="dropdown-item"
